@@ -1,0 +1,74 @@
+/**
+ * Custom Style Sheet for JQuery Form Validation
+ * Created by Hitvardhan Singh Solanki
+ */
+
+/**
+ * import custom fonts from google fonts
+ * font-family: 'Jura'
+ */
+@import url('https://fonts.googleapis.com/css?family=Jura');
+
+/**
+ * General Global Css
+ */
+body{
+  background : url('./images/background_genesis.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/**
+ * Main Form Container
+ */
+.custom-container{
+  color: white;
+  max-width: 600px;
+  background-color: transparent;
+  vertical-align: middle;
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 0 10px 10px 10px;
+}
+.custom-container h1{
+  font-size: 28px;
+  font-family: 'Jura', sans-serif;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+.custom-container form{
+  font-family: 'Jura', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 30px;
+  border: solid 2px rgb(247, 247, 247);
+  border-radius: 6px;
+}
+
+.custom-container form .btn{
+  margin-top: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.custom-container form .error-input{
+    border: solid 2px red;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+  .custom-container{
+    margin-top: 50px;
+    height: 300px;
+    font-size: 20px;
+  }
+  .form-group .custom-control,
+  .custom-container form .btn{
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+  }
+}

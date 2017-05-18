@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Sample Form Plugin</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <!-- Form to validate-->
+    <div class="container custom-container">
+      <h1 class="text-center">
+        Form validation using jquery
+      </h1>
+      <form novalidate="true">
+        <div class="form-group">
+          <label for="email" >Email address:</label>
+          <input type="email" class="form-control custom-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control custom-control" id="pwd" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+    </div>
+
+    <!-- Scripts inclusion -->
+    <script src="./bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <!-- jQuery plugin -->
+    <script src="./js/main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      $('form').change(function() {$(this).validateForm();}).submit(function(e)
+      {
+        //Script to validate the form
+        $(this).validateForm();
+        e.preventDefault();
+      });
+    });
+    </script>
+  </body>
+</html>
